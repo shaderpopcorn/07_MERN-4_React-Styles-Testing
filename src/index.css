@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=MuseoModerno:wght@100;200&family=Quicksand&display=swap");
+
+:root {
+  font-family: "Comfortaa", cursive;
+  font-weight: 300;
+  line-height: 1.5;
+
+  --headerHeight: 10vh;
+
+  --yellow: #fac814; /* #fdd020 */
+  --orange: rgb(140, 70, 0);
+  --white: #fafafa;
+  --background: rgb(0, 0, 0, 0.7);
+  --darkGray: #2d2d2d;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: url("../public/assets/images/studio_nz.png");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  touch-action: unset;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior: none;
+  overflow: auto;
+}

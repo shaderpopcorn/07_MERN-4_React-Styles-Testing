@@ -1,13 +1,37 @@
-import "./Header.css";
+import {
+  HeaderSection,
+  Topbar,
+  Logo,
+  LogoButton,
+  Headline,
+  HorizontalLine,
+  Bottombar,
+  NavList,
+  Link,
+} from "./Header.styled";
+
 const Header = () => {
   return (
-    <header>
-      <h1 data-testid="title">Turbine</h1>
-      <img
-        src="https://static.vecteezy.com/system/resources/previews/001/192/065/original/circle-logo-turbine-png.png"
-        alt="Turbine Icon"
-      />
-    </header>
+    <HeaderSection>
+      <HorizontalLine />
+      <Topbar>
+        <LogoButton>
+          <Logo src="./assets/images/logo.png" alt="Shaderpopcorn Logo" />
+        </LogoButton>
+        <Headline data-testid="title">Shaderpopcorn</Headline>
+      </Topbar>
+      <Bottombar>
+        <NavList>
+          <Link>About</Link>
+        </NavList>
+        <NavList>
+          <Link>Contact</Link>
+        </NavList>
+        <NavList>
+          <Link>Jobs</Link>
+        </NavList>
+      </Bottombar>
+    </HeaderSection>
   );
 };
 

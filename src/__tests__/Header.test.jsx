@@ -11,7 +11,10 @@ import Header from "../components/Header";
 describe("Header", () => {
   test("logo should have the correct alt text", () => {
     render(<Header />);
-    expect(screen.getByRole("img")).toHaveAttribute("alt", "Turbine Icon");
+    expect(screen.getByRole("img")).toHaveAttribute(
+      "alt",
+      "Shaderpopcorn Logo"
+    );
   });
   test("Heading should contain the correct text", () => {
     render(<Header />);
