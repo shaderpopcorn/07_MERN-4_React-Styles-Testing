@@ -8,8 +8,8 @@ export const MainSection = styled.section`
 `;
 
 export const Box = styled.div`
-  position: absolute;
-  top: 25%;
+  /* position: absolute;
+  top: 25%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,6 +51,11 @@ export const Inner = styled.div`
     transform: perspective(7vw) rotateY(15deg);
   }
 
+  span {
+    position: absolute;
+    animation: marquee 7s linear infinite;
+  }
+
   @keyframes marquee {
     from {
       left: 100%;
@@ -59,10 +64,5 @@ export const Inner = styled.div`
     to {
       left: -100%;
     }
-  }
-
-  span {
-    position: absolute;
-    animation: marquee 7s linear infinite;
   }
 `;
