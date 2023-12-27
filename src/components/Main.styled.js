@@ -38,16 +38,12 @@ export const Inner = styled.button`
   white-space: nowrap;
   overflow: hidden;
   border-radius: 2vh;
-
   cursor: pointer;
 
   &:first-child {
     background-color: var(--background);
-    border-right: 5px solid var(--yellow);
-    border-left: 5px solid var(--yellow);
-    border-top: 5px solid var(--yellow);
-    border-bottom: 5px solid var(--yellow);
-    color: var(--yellow);
+    border: 5px solid var(--white);
+    color: var(--white);
     transform-origin: right;
     transform: perspective(10vw) rotateY(-15deg);
   }
@@ -59,16 +55,15 @@ export const Inner = styled.button`
 
   &:last-child {
     background-color: var(--background);
-    border-right: 5px solid var(--white);
-    border-left: 5px solid var(--white);
-    border-top: 5px solid var(--white);
-    border-bottom: 5px solid var(--white);
+    border: 5px solid var(--white);
     color: var(--white);
     transform-origin: left;
     transform: perspective(10vw) rotateY(15deg);
   }
 
   &:hover {
+    border: 5px solid var(--yellow);
+    color: var(--yellow);
     scale: 0.95;
   }
 
@@ -90,7 +85,7 @@ export const Inner = styled.button`
 `;
 
 export const PopUp = styled(Box)`
-  width: 90%;
+  width: 86%;
   max-width: 1100px;
   height: 80vh;
   transform: translate(0, 3%);
@@ -100,30 +95,46 @@ export const PopUp = styled(Box)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 `;
 
-export const PopUpLeft = styled(PopUp)``;
+export const PopUpLeft = styled(PopUp)`
+  ${({ visibility }) => handleVisibility(visibility)};
+`;
 
-export const PopUpRight = styled(PopUp)``;
+export const PopUpRight = styled(PopUp)`
+  ${({ visibility }) => handleVisibility(visibility)};
+`;
 
 export const CloseButton = styled.button`
-  width: 1vh;
-  height: 1vh;
+  position: absolute;
+  top: -2vh;
+  right: 1.5vh;
+  width: 2vh;
+  height: 2vh;
+  border: none;
+  font-size: 10vh;
+  font-weight: 200;
+  transform: rotate(45deg);
+  background: none;
+  color: var(--white);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--yellow);
+  }
 `;
 
 export const Headline = styled.h3`
+  margin-top: 10vh;
   color: var(--white);
 `;
 
 export const Text = styled.p`
   margin: 1vh 5vh;
+  font-size: 2vh;
   color: var(--white);
 `;
-
-export const LeftPopUp = styled(PopUp)``;
-
-export const RightPopUp = styled(PopUp)``;
 
 // export const ProjectsButton = styled.button`
 //   background-color: var(--background);

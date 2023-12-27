@@ -82,7 +82,8 @@ export const NavLink = styled.li`
   cursor: pointer;
 
   &:hover {
-    border-bottom: 1px solid var(--white);
+    color: var(--yellow);
+    border-bottom: 1px solid var(--yellow);
   }
 
   &:active {

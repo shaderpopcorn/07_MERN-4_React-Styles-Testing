@@ -13,59 +13,59 @@ import Header from "../components/Header";
 
 describe("Header", () => {
   // HEADER SECTION
-  test("header-section should be rendered", () => {
+  test("header-section is rendered", () => {
     render(<Header />);
     expect(screen.getByTestId("header-section")).toBeInTheDocument(true);
   });
-  test("horizontal line should be rendered", () => {
+  test("horizontal line is rendered", () => {
     render(<Header />);
     expect(screen.getByTestId("horizontal-line")).toBeInTheDocument(true);
   });
   // TOP-BAR
-  test("topbar should be rendered", () => {
+  test("topbar is rendered", () => {
     render(<Header />);
     expect(screen.getByTestId("topbar")).toBeInTheDocument(true);
   });
-  test("topbar should contain logo-button", () => {
+  test("topbar has logo-button", () => {
     render(<Header />);
     expect(screen.getByTestId("topbar")).toContainHTML("button");
   });
-  test("logo-button should contain logo-image", () => {
+  test("logo-button has logo-image", () => {
     render(<Header />);
     expect(screen.getByTestId("topbar")).toContainHTML("img");
   });
-  test("logo should contain the correct src", () => {
+  test("logo has the correct src", () => {
     render(<Header />);
     expect(screen.getByRole("img")).toHaveAttribute(
       "src",
       "./assets/images/logo.png"
     );
   });
-  test("logo should contain the correct alt text", () => {
+  test("logo has the correct alt text", () => {
     render(<Header />);
     expect(screen.getByRole("img")).toHaveAttribute(
       "alt",
       "Shaderpopcorn Logo"
     );
   });
-  test("topbar should contain headline", () => {
+  test("topbar has headline", () => {
     render(<Header />);
     expect(screen.getByTestId("topbar")).toContainHTML("h3");
   });
-  test("headline should contain the correct text", () => {
+  test("headline has the correct text", () => {
     render(<Header />);
     expect(screen.getByTestId("title")).toHaveTextContent("Shaderpopcorn");
   });
   // BOTTOM-BAR
-  test("bottombar should be rendered", () => {
+  test("bottombar is rendered", () => {
     render(<Header />);
     expect(screen.getByTestId("topbar")).toBeInTheDocument(true);
   });
-  test("bottombar should contain nav-list", () => {
+  test("bottombar has nav-list", () => {
     render(<Header />);
     expect(screen.getByTestId("bottombar")).toContainHTML("ul");
   });
-  test("nav-list should contain three links", () => {
+  test("nav-list has three links", () => {
     render(<Header />);
     const items = screen.getAllByRole("listitem");
     expect(items.length).toBe(3);
