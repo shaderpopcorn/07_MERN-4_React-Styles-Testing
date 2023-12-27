@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const HeaderSection = styled.section`
   position: fixed;
+  z-index: 1;
   width: 100%;
   height: var(--headerHeight);
   background-color: var(--background);
@@ -38,6 +40,9 @@ export const LogoButton = styled.button`
   background-color: var(--white);
   border-radius: 50%;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Logo = styled.img`
@@ -51,24 +56,24 @@ export const Headline = styled.h3`
   font-size: calc(var(--headerHeight) / 4);
 `;
 
-export const Bottombar = styled.div`
+export const Bottombar = styled.nav`
   width: 100%;
   max-width: 1200px;
   height: calc(var(--headerHeight) / 2);
-  transform: translate(0, calc(var(--headerHeight) / 2));
+  transform: translate(12vh, calc(var(--headerHeight) / 2));
   display: flex;
   align-items: center;
   justify-content: start;
 `;
 
 export const NavList = styled.ul`
-  transform: translate(12vh, 0);
   padding: 0;
   margin: 0;
   list-style: none;
 `;
 
-export const Link = styled.li`
+export const StyledLink = styled(Link)`
+  text-decoration: none;
   margin-right: 3vh;
   color: var(--white);
   font-weight: 700;

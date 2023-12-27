@@ -8,8 +8,12 @@ export const MainSection = styled.section`
 `;
 
 export const Box = styled.div`
-  /* position: absolute;
-  top: 25%; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,13 +30,13 @@ export const Inner = styled.div`
 
   &:first-child {
     background-color: var(--background);
-    border-right: 1px solid var(--yellow);
+    /* border-right: 1px solid var(--yellow); */
     border-left: 5px solid var(--yellow);
     border-top: 5px solid var(--yellow);
     border-bottom: 5px solid var(--yellow);
     color: var(--yellow);
     transform-origin: right;
-    transform: perspective(7vw) rotateY(-15deg);
+    transform: perspective(10vw) rotateY(-15deg);
   }
 
   &:first-child span {
@@ -43,12 +47,12 @@ export const Inner = styled.div`
   &:last-child {
     background-color: var(--background);
     border-right: 5px solid var(--white);
-    /* border-left: 1px solid var(--white); */
+    border-left: 1px solid var(--white);
     border-top: 5px solid var(--white);
     border-bottom: 5px solid var(--white);
     color: var(--white);
     transform-origin: left;
-    transform: perspective(7vw) rotateY(15deg);
+    transform: perspective(10vw) rotateY(15deg);
   }
 
   span {

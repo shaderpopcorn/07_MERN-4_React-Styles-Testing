@@ -5,10 +5,10 @@ const Main = () => {
     <MainSection>
       <Box>
         <Inner>
-          <span>VR + AR + 3D + 2D</span>
+          <span>3D+2D</span>
         </Inner>
         <Inner>
-          <span>VR + AR + 3D + 2D</span>
+          <span>VR+AR</span>
         </Inner>
       </Box>
     </MainSection>
