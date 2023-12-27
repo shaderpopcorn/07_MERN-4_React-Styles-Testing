@@ -5,7 +5,9 @@ const Footer = () => {
     <>
       <FooterSection>
         <Bottombar>
-          <Copyright>&copy; Copyright by Shaderpopcorn</Copyright>
+          <Copyright data-testid="copyright">
+            &copy; Copyright by Shaderpopcorn
+          </Copyright>
         </Bottombar>
       </FooterSection>
     </>

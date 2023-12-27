@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+const handleVisibility = (visibility) => {
+  switch (visibility) {
+    case "visible":
+      return "visibility: visible";
+    case "hidden":
+      return "visibility: hidden";
+  }
+};
+
 export const MainSection = styled.section`
   width: 100%;
   display: flex;
@@ -17,20 +26,24 @@ export const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${({ visibility }) => handleVisibility(visibility)};
 `;
 
-export const Inner = styled.div`
+export const Inner = styled.button`
   width: 100vw;
   height: 20vw;
-  line-height: 18vw;
+  /* line-height: 18vw; */
   font-size: 11vw;
   font-family: sans-serif;
   white-space: nowrap;
   overflow: hidden;
+  border-radius: 2vh;
+
+  cursor: pointer;
 
   &:first-child {
     background-color: var(--background);
-    /* border-right: 1px solid var(--yellow); */
+    border-right: 5px solid var(--yellow);
     border-left: 5px solid var(--yellow);
     border-top: 5px solid var(--yellow);
     border-bottom: 5px solid var(--yellow);
@@ -47,7 +60,7 @@ export const Inner = styled.div`
   &:last-child {
     background-color: var(--background);
     border-right: 5px solid var(--white);
-    border-left: 1px solid var(--white);
+    border-left: 5px solid var(--white);
     border-top: 5px solid var(--white);
     border-bottom: 5px solid var(--white);
     color: var(--white);
@@ -55,8 +68,13 @@ export const Inner = styled.div`
     transform: perspective(10vw) rotateY(15deg);
   }
 
+  &:hover {
+    scale: 0.95;
+  }
+
   span {
     position: absolute;
+    transform: translate(0, -10vh);
     animation: marquee 7s linear infinite;
   }
 
@@ -70,3 +88,53 @@ export const Inner = styled.div`
     }
   }
 `;
+
+export const PopUp = styled(Box)`
+  width: 90%;
+  max-width: 1100px;
+  height: 80vh;
+  transform: translate(0, 3%);
+  background-color: var(--background);
+  border: 2px solid var(--white);
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const PopUpLeft = styled(PopUp)``;
+
+export const PopUpRight = styled(PopUp)``;
+
+export const CloseButton = styled.button`
+  width: 1vh;
+  height: 1vh;
+`;
+
+export const Headline = styled.h3`
+  color: var(--white);
+`;
+
+export const Text = styled.p`
+  margin: 1vh 5vh;
+  color: var(--white);
+`;
+
+export const LeftPopUp = styled(PopUp)``;
+
+export const RightPopUp = styled(PopUp)``;
+
+// export const ProjectsButton = styled.button`
+//   background-color: var(--background);
+//   width: 20vw;
+//   height: 10vh;
+//   border: 2px solid var(--white);
+//   /* border-radius: 1vh; */
+//   position: absolute;
+//   top: 40%;
+//   bottom: 0;
+//   left: -40%;
+//   right: 0;
+//   margin: auto;
+// `;

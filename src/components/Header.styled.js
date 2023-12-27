@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const HeaderSection = styled.section`
   position: fixed;
@@ -43,6 +42,7 @@ export const LogoButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Logo = styled.img`
@@ -70,9 +70,10 @@ export const NavList = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
 `;
 
-export const StyledLink = styled(Link)`
+export const NavLink = styled.li`
   text-decoration: none;
   margin-right: 3vh;
   color: var(--white);
@@ -81,10 +82,10 @@ export const StyledLink = styled(Link)`
   cursor: pointer;
 
   &:hover {
-    border-bottom: 1px solid var(--background);
+    border-bottom: 1px solid var(--white);
   }
 
-  &:checked {
-    border-bottom: 1px solid var(--background);
+  &:active {
+    border-bottom: 1px solid var(--white);
   }
 `;

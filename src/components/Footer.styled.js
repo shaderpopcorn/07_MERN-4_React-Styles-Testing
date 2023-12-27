@@ -5,7 +5,7 @@ export const FooterSection = styled.section`
   display: flex;
   height: calc(var(--headerHeight) / 2);
   background-color: var(--background);
-  border-top: 2px solid var(--white);
+  /* border-top: 1px solid var(--white); */
   justify-content: center;
   position: fixed;
   bottom: 0;
