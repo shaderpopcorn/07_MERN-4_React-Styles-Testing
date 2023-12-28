@@ -10,8 +10,6 @@ import {
   NavLink,
 } from "./Header.styled";
 
-// import { Outlet, Link } from "react-router-dom";
-
 const Header = () => {
   return (
     <>
@@ -31,7 +29,6 @@ const Header = () => {
           </NavList>
         </Bottombar>
       </HeaderSection>
-      {/* <Outlet /> */}
     </>
   );
 };
