@@ -69,7 +69,7 @@ export const Inner = styled.button`
 
   span {
     position: absolute;
-    transform: translate(0, -10vh);
+    transform: translate(0, -7vw);
     animation: marquee 7s linear infinite;
   }
 

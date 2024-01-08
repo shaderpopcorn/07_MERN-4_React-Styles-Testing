@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const HeaderSection = styled.section`
   position: fixed;
@@ -29,7 +28,7 @@ export const Topbar = styled.div`
   height: calc(var(--headerHeight) / 2);
 `;
 
-export const LogoButton = styled(Link)`
+export const LogoButton = styled.button`
   position: absolute;
   transform: translate(
     calc(var(--headerHeight) / 10),
@@ -74,7 +73,7 @@ export const NavList = styled.ul`
   display: flex;
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.li`
   text-decoration: none;
   margin-right: 3vh;
   color: var(--white);
