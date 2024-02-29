@@ -6,7 +6,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { createMemoryHistory } from "history";
-import { Link, Router } from "react-router-dom";
+import { BrowserRouter, Link, Router } from "react-router-dom";
 
 import Header from "../components/Header";
 // import Layout from "../pages/Layout";
@@ -14,59 +14,107 @@ import Header from "../components/Header";
 describe("Header", () => {
   // HEADER SECTION
   test("header-section is rendered", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByTestId("header-section")).toBeInTheDocument(true);
   });
   test("horizontal line is rendered", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByTestId("horizontal-line")).toBeInTheDocument(true);
   });
   // TOP-BAR
   test("topbar is rendered", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByTestId("topbar")).toBeInTheDocument(true);
   });
-  test("topbar has logo-button", () => {
-    render(<Header />);
-    expect(screen.getByTestId("topbar")).toContainHTML("button");
+  test("topbar has logo-link-button", () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
+    expect(screen.getByTestId("topbar")).toContainHTML("a");
   });
   test("logo-button has logo-image", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByTestId("topbar")).toContainHTML("img");
   });
   test("logo has the correct src", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByRole("img")).toHaveAttribute(
       "src",
       "./assets/images/logo.png"
     );
   });
   test("logo has the correct alt text", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByRole("img")).toHaveAttribute(
       "alt",
       "Shaderpopcorn Logo"
     );
   });
   test("topbar has headline", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByTestId("topbar")).toContainHTML("h3");
   });
   test("headline has the correct text", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByTestId("title")).toHaveTextContent("Shaderpopcorn");
   });
   // BOTTOM-BAR
   test("bottombar is rendered", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByTestId("topbar")).toBeInTheDocument(true);
   });
   test("bottombar has nav-list", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     expect(screen.getByTestId("bottombar")).toContainHTML("ul");
   });
   test("nav-list has three links", () => {
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
     const items = screen.getAllByRole("listitem");
     expect(items.length).toBe(3);
   });

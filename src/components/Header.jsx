@@ -25,9 +25,15 @@ const Header = () => {
         </Topbar>
         <Bottombar data-testid="bottombar">
           <NavList data-testid="nav-list">
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-            <NavLink to="/jobs">Jobs</NavLink>
+            <NavLink role="listitem" to="/about">
+              About
+            </NavLink>
+            <NavLink role="listitem" to="/contact">
+              Contact
+            </NavLink>
+            <NavLink role="listitem" to="/jobs">
+              Jobs
+            </NavLink>
           </NavList>
         </Bottombar>
       </HeaderSection>
